@@ -1,23 +1,11 @@
-local startup = {
-    banner = {
-        "█▀▀▀▀▀▄  █▀▀▀▀▀▄   ▄▀▀▀▀▄   ▄▀▀▀▀▄   ▄▀▀▀▀▄  █▀▀▀▀▀▄   ▄▀▀▀▀▀█",
-        "█      █ █      █ █      █ █      █ █      █ █      █ █      ▓",
-        "█  █▀  █ █  █▀  █ █  █▀  █ █  █▀  █ █  █▀  █ █  █▀  █ █  █▀▀▀▀",
-        "▓  ▀▀ ▄▀ ▓  ▀▀ ▀▄ ▓  █▄  █ ▓  █▄▀▀█ ▓  █▄  █ ▓  █▄  █ ▓  █▄█▄▄",
-        "▒  █▀▀   ▒  █   ▒ ▒  ▀▀  ▒ ▒  ▀▀  ▒ ▒  ▀▀  ▒ ▒  ▀▀  ▒ ▒      ▒",
-        "░▄▄█     ░▄▄█ ▄▄█  ▀▄▄▄▄▀   ▀▄▄▄▄▀   ▀▄▄▄▄▀  ░▄▄▄▄▄▀   ▀▄▄▄▄▄█",
-    },
+print([[
+█▀▀▀▀▀▄  █▀▀▀▀▀▄   ▄▀▀▀▀▄   ▄▀▀▀▀▄   ▄▀▀▀▀▄  █▀▀▀▀▀▄   ▄▀▀▀▀▀█
+█      █ █      █ █      █ █      █ █      █ █      █ █      ▓
+█  █▀  █ █  █▀  █ █  █▀  █ █  █▀  █ █  █▀  █ █  █▀  █ █  █▀▀▀▀
+▓  ▀▀ ▄▀ ▓  ▀▀ ▀▄ ▓  █▄  █ ▓  █▄▀▀█ ▓  █▄  █ ▓  █▄  █ ▓  █▄█▄▄
+▒  █▀▀   ▒  █   ▒ ▒  ▀▀  ▒ ▒  ▀▀  ▒ ▒  ▀▀  ▒ ▒  ▀▀  ▒ ▒      ▒
+░▄▄█     ░▄▄█ ▄▄█  ▀▄▄▄▄▀   ▀▄▄▄▄▀   ▀▄▄▄▄▀  ░▄▄▄▄▄▀   ▀▄▄▄▄▄█ -- whats not a better way to start a new generation of roblox client recreation?
+]])
+local version = game:HttpGet("https://raw.githubusercontent.com/clockersman/ProCore/master/src/files/version.json")
 
-    info = {
-        name = "Roblox Client Recreation",
-        description = "What's not a better way to start a new generation of Roblox client recreation?",
-    }
-}
-
-for _, line in ipairs(startup.banner) do
-    print(line)
-end
-
-print()
-print(startup.info.name)
-print(startup.info.description)
+print("ProCore Version: " .. game:GetService("HttpService"):JSONDecode(version).version)
